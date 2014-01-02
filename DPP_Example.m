@@ -5,7 +5,7 @@
 % heterogeneous gene expression kinetics using synthetic data of multiple
 % cells.
 %--------------------------------------------------------------------------
-% Author: Christoph Zechner, BISON Group, ETH Zurich
+% Author: Christoph Zechner, Automatic Control Lab, ETH Zurich
 %--------------------------------------------------------------------------
 % For feedback and questions please contact me at:
 %   zechner@control.ee.ethz.ch
@@ -168,4 +168,4 @@ pDist = RunDPP(pDist, model, cells, options, histPlotOptions, qPlotOptions);
 
 % Get inferred parameter statistics and save the results
 ParameterStats = GetParameterStatistics(pDist, model);
-save results/Experiment_TwoState.mat pDist ParameterStats model cells;
+save Experiment_TwoState.mat pDist ParameterStats model cells;

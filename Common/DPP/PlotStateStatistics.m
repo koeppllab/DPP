@@ -39,7 +39,9 @@ for k=1:length(cellIdx)
         tPath = path.tPath;
         
         grid = linspace(min(tPath), max(tPath), numPoints);
-        [dPath, dTime] = SampleCTMPPathGrid(xPath, tPath, grid);
+        [dPath] = SampleCTMPPathGrid(xPath, tPath, grid);
+        
+        dTime = grid;
         
         for l=1:length(stateIdx)
             cellsQuantile{k}.States{l}.Data(i, :) = dPath(stateIdx(l), :);
