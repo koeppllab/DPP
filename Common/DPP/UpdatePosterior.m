@@ -65,9 +65,6 @@ for u=1:numBlocks
     
     [particles, particleIdx] = DrawFromParticleDistribution(pDist, currentBlockSize);
     
-    %particles = CopyParticles(pDist, particleIdx, currentBlockSize);
-    
-
     %% Run MCMC scheme
     for l=1:currentBlockSize
 
