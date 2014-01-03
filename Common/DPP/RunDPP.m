@@ -12,11 +12,10 @@ function [pDistOut] = RunDPP(pDist, model, cells, options, histPlotOptions, ...
 
     options.N = 30000;
     
-    v = 1;
     
     for k=1:floor(numMeasurements/v)
-        options.TimeIndex = [(k-1)*v+1:k*v];
-        qPlotOptions.numPoints = k*8*v;
+        options.TimeIndex = k;
+        qPlotOptions.numPoints = k*10;
         
         
         pDist = UpdatePosterior(pDist, model, cells, options);

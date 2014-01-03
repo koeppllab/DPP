@@ -6,6 +6,10 @@
 
 clear all;
 
+% Delete old mex files
+evalc('!rm -f Common/StochasticSimulation/*.mex*');
+
+% Compile *.c files
 mex -output Common/StochasticSimulation/SimulateMarginalProcess ...
     MexFiles/SimulateMarginalProcess.c;
 mex -output Common/StochasticSimulation/SampleCTMPPathGrid ...
