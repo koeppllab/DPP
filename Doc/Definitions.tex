@@ -1,0 +1,153 @@
+
+%%%% Commands
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\vectSymbol}[1]{\boldsymbol{#1}}
+
+\newcommand{\Normal}[2]{\mathcal{N}\left( #1, #2 \right)}
+
+
+%%%% Definitions
+
+\def\MCChain{\Lambda}
+\def\mCChain{\lambda}
+\def\mCChainInt{\boldsymbol{\lambda}}
+\def\MCIndex{j}
+
+
+\def\Time{t}
+\def\TimeIndex{N}
+\def\timeIndex{l}
+\def\DiscreteTime{\Time_{\timeIndex}}
+
+\def\InitialDistribution{\pi}
+\def\ParameterPrior{\phi}
+\def\SingleParamPrior{\phi}
+\def\MeasurementParamPrior{\psi}
+\def\SingleMeasurementParamPrior{\psi}
+
+\def\MeasurementSigma{\Sigma}
+\def\measurementSigma{\sigma}
+
+\def\Joint{p}
+\def\Density{p}
+\def\Proposal{q}
+
+\def\GammaDistribution{\mathcal{G}}
+
+\def\noise{u}
+\def\Noise{U}
+
+
+\def\NExtrinsic{N}
+\def\extrinsicVariable{z}
+\def\ExtrinsicVariable{Z}
+\def\ExtrinsicSpace{\mathcal{Z}}
+\def\hyperParameters{a}
+\def\HyperParameters{A}
+\def\HyperSpace{\mathcal{A}}
+
+
+\def\MarkovChain{\State}
+\def\State{X}
+\def\StatePopulation{\mathbb{X}}
+\def\StateInt{\mathbf{\State}}
+\def\state{x}
+\def\stateInt{\mathbf{\state}}
+\def\StateTime{\State({\Time})}
+\def\stateDiscreteTime{\state_{\timeIndex}}
+\def\StateDim{d}
+\def\ReactionDim{\nu}
+\def\CellCount{M}
+\def\StateSpace{\mathbb{N}_{+}}
+\def\StateSpaceDim{\StateSpace^{\StateDim}}
+
+\def\Measurement{Y}
+\def\MeasurementInt{{\Measurement}}
+\def\measurement{y}
+\def\measurementInt{{\measurement}}
+\def\MeasurementTime{\Measurement_{\timeIndex}}
+\def\measurementTime{\measurement_{\timeIndex}}
+\def\MeasurementDim{o}
+\def\MeasurementSpace{\mathbb{R}}
+\def\MeasurementSpaceDim{\MeasurementSpace^{\MeasurementDim}}
+
+\def\PathDensity{f}
+\def\MeasurementDensity{g}
+
+\def\AllParameters{\Theta}
+\def\allParameters{\theta}
+
+\def\SharedParameters{S}
+\def\sharedParameters{s}
+
+\def\kParameters{C}
+\def\kparameters{c}
+\def\kparameter{c}
+
+\def\Lapvar{\sigma}
+
+% marginal propensity
+\def\MargProp{h}
+
+\def\Parameters{C}
+\def\parameters{c}
+\def\parameter{c}
+
+\def\MeasurementParameters{\Omega}
+\def\measurementParameters{\omega}
+
+\def\Covariates{V}
+\def\covariates{v}
+
+\def\GammaDist{\mathcal{G}}
+
+% the differential sign should not be italic
+\def\df{\mathrm{d}}
+
+\def\MarkovBlanket{\mathcal{MB}}
+
+\def\History{\mathcal{H}}
+
+%% Spaces
+\def\Real{\mathbb{R}}
+\def\RealPos{\mathbb{R}_{\geq 0}}
+
+\def\FullLatentSet{U}
+\def\fullLatentSet{u}
+\def\FullMeasurementSet{Z}
+\def\fullMeasurementSet{z}
+\def\LatentSubSet{\FullLatentSet}
+\def\latentSubSet{\fullLatentSet}
+
+\newcommand{\Expect}[1]{ \mathbb{ E } \left[ #1 \right]}
+\newcommand{\ExpectWRT}[2]{ \mathbb{ E }_{ #2 } \left[ #1 \right]}
+\newcommand{\Var}[1]{ \mathrm{Var} \left[ #1 \right]}
+\newcommand{\VarWRT}[2]{ \mathrm{ Var }_{ #2 } \left[ #1 \right]}
+
+\def\Mgf{G}
+
+\def\PriorParameters{\Theta}
+\def\priorParameters{\theta}
+\def\priorParamA{\kappa}
+\def\priorParamB{\chi}
+\def\PathSpace{\mathcal{X}}
+
+\newcommand{\LogNormal}[2]{\mathcal{LN} \left( #1, #2 \right)}
+\newcommand{\Uniform}[2]{\mathcal{U} \left( #1, #2 \right)}
+
+\def\Model{\mathcal{M}}
+\def\model{m}
+\def\BayesFactor{\mathcal{K}}
+
+\def\IndexSet{\mathcal{I}}
+\def\CylinderSet{\Gamma(\stateInt)}
+
+\def\MorphParameters{B}
+\def\morphParameters{b}
+
+\newcommand{\Indicator}[2]{\mathbbm{1}_{#2} \left( #1 \right)}
+
+
+\newcommand{\Comment}[2]{ {\color{blue} #1} \textit{Remark: #2}}
+
