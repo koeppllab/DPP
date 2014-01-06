@@ -1,4 +1,4 @@
-%% %%%%%%%%%%%%%%%%%%%%%%%%%   InerenceDPP.m   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%   DPP_Example.m   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Objective: Example script for state- and parameter inference using DPP.
 %--------------------------------------------------------------------------
 % Description: The two-state gene expression model is used to infer the
