@@ -1,4 +1,4 @@
-%% %%%%%%%%%%%%%%%%%%%%%%%%%   RunDPP.m   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   RunDPP.m   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Objective: Main function of the DPP algorithm.
 %--------------------------------------------------------------------------
 % Description: Takes all the options, model specifications and data and
@@ -28,7 +28,6 @@
 % For feedback and questions please contact me at:
 %   zechner@control.ee.ethz.ch
 %--------------------------------------------------------------------------
-
 
 function [pDistOut] = RunDPP(pDist, model, cells, options, histPlotOptions, ...
     qPlotOptions)
