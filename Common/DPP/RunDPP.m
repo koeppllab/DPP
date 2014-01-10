@@ -41,10 +41,10 @@ function [pDistOut] = RunDPP(pDist, model, cells, options, histPlotOptions, ...
         numMeasurements = length(cells{1}.MeasurementTime);
     end
 
-    options.N = 30000;
+    options.N = 40000;
     
     
-    for k=1:floor(numMeasurements/v)
+    for k=1:floor(numMeasurements)
         options.TimeIndex = k;
         qPlotOptions.numPoints = k*10;
         

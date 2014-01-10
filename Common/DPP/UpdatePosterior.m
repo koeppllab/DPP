@@ -31,7 +31,6 @@
 %   zechner@control.ee.ethz.ch
 %--------------------------------------------------------------------------
 
-
 function [pPosterior] = UpdatePosterior(pDist, model, targetCells, options)
 
 callbackProvided = ~isempty(options.CallBackIteration);
@@ -191,12 +190,8 @@ for u=1:numBlocks
         currentParticle.RandomEffectHyper = RandomEffectHyper;
         currentParticle.MorphHyper = MorphHyper;
         currentParticle.MeasurementVariance = MeasurementVariance;
-        %currentParticle = ApplyInvariantKernelToParticle(currentParticle, model, targetCells, options.SubMCMCRuns);
         
-        
-        %pPosterior = SetParticleSample(pPosterior, currentParticle, currParticleIdx);
-        
-        % HACK: Much faster than using the function!
+        %% Store particle in the new posterior distribution
         idx = currParticleIdx;
         pPosterior.IndexChain(idx) = currentParticle.Index;
 

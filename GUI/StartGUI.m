@@ -4,8 +4,8 @@ close all;
 
 addpath('../Common/');
 addpath('../Common/Statistics');
-addpath('../Common/StochChemKin');
-addpath('../Common/StochChemKin/SMC_MixedEffect');
+addpath('../Common/StochasticSimulation');
+addpath('../Common/DPP');
 
 
 h = DPP;

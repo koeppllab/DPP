@@ -10,7 +10,7 @@
 /* -----------------------------------------------------
  * Name: Factorial
  *------------------------------------------------------
- * Purpose: Calculates factorial (used for propensities).
+ * Purpose: Calculates factorial (not really used).
  *-----------------------------------------------------*/
 int Factorial(int x)
 {
@@ -20,6 +20,24 @@ int Factorial(int x)
     }
     
     return x * Factorial(x - 1);
+}
+
+/* -----------------------------------------------------
+ * Name: FactorialIterative
+ *------------------------------------------------------
+ * Purpose: Calculates factorial (iteratively).
+ *-----------------------------------------------------*/
+int FactorialIterative(int x)
+{
+    int prod, k;
+    prod = 1;
+    
+    for (k=1;k<=x;k++)
+    {
+        prod *= k;
+    }
+    
+    return prod;
 }
 
 

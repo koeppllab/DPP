@@ -1,5 +1,34 @@
-function simulatedCell = ForwardSimulateSingleCellFD(particle, model, numCells, c, aPrior,...
-    bPrior, startTime, endTime, options, targetCellIdx, targetCell)
+%%%%%%%%%%%%%%%%%%%%% ForwardSimulateSingleCellFD.m %%%%%%%%%%%%%%%%%%%%%%%
+% Objective: Extend a sample path until the next time point.
+%--------------------------------------------------------------------------
+% Description: Takes a particle and extends the sample path of the
+% specified cell ("targetCell") until "endTime".
+%--------------------------------------------------------------------------
+% DPP - A MATLAB toolbox for the inference of heterogeneous reaction 
+% kinetics.
+%
+% Copyright (C) 2014  Christoph Zechner
+% 
+% This program is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%--------------------------------------------------------------------------
+% For feedback and questions please contact me at:
+%   zechner@control.ee.ethz.ch
+%--------------------------------------------------------------------------
+
+function simulatedCell = ForwardSimulateSingleCellFD(particle, model, ... 
+    numCells, c, aPrior, bPrior, startTime, endTime, options, ...
+    targetCellIdx, targetCell)
 
 N = options.N;
 
@@ -64,9 +93,10 @@ end
     currentA(model.RandomEffectIndex), ...
     currentB(model.RandomEffectIndex));
 
+% It might be the case that more reaction fire than the specified N-value.
+% In this case, the sample is rejected.
 if (tPath(end) ~= endTime)
     simulatedCell.Reject = 1;
-    fprintf('Path memory exceeded\n');
 else
     simulatedCell.Reject = 0;
 end
