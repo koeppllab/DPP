@@ -174,7 +174,6 @@ for u=1:numBlocks
             
             Paths = particle.Paths;
             
-            Paths{1}.deltamRNA = [particle.Paths{1}.deltamRNA simulatedCell.deltamRNA];
             Paths{1}.a = simulatedCell.a;
             Paths{1}.b = simulatedCell.b;
             Paths{1}.LastA = simulatedCell.LastA;

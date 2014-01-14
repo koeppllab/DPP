@@ -46,14 +46,6 @@ if (morph==1)
         particle.MorphHyper(2) / targetCell.MorphologicalFeatureValue;
 end
 
-%     [xPath, tPath, rPath, ~, G] = ...
-%         SimulatePopulationTimeVaryingSyncNR(X0, c, Pre, Post, N, ...
-%         endTime, ...
-%         model.InputParams.inputRateIndex,...
-%         model.InputFun, model.InputParams, ...
-%         model.InputParams.inputTimes, startTime, ...
-%         model.RandomEffectIndex, aPriorTmp, bPriorTmp, currentA, currentB);
-
 
 [xPath, tPath, rPath, G] = ...
     SimulateMarginalProcess(X0, c, Pre,...
@@ -67,19 +59,16 @@ end
 
 if (tPath(end) ~= endTime)
     simulatedCell.Reject = 1;
-    fprintf('Path memory exceeded\n');
 else
     simulatedCell.Reject = 0;
 end
 
-%deltamRNA = countMRNA(tPath, xPath);
-deltamRNA = CountmRNA(rPath, 2, 3);
-
 if (options.StorePaths > 0)
     
     if (options.StorePathNumPoints > 0)
-        [xSampled, tSampled] = ...
+        xSampled = ...
             SampleCTMPPathGrid(xPath, tPath, sampleGrid);
+        tSampled = sampleGrid;
     else
         xSampled = xPath;
         tSampled = tPath;
@@ -107,10 +96,7 @@ simulatedCell.StateMeasurements = ...
 
 simulatedCell.xPath = xSampled;
 simulatedCell.tPath = tSampled;
-%simulatedCell.rPath = rPath;
-%simulatedCell.G = G;
 simulatedCell.EndPoint = xSampled;
-simulatedCell.deltamRNA = deltamRNA;
 simulatedCell.xSampled = xSampledMeasurement;
 
 

@@ -44,7 +44,7 @@ function [pDistOut] = RunDPP_SingleCell(pDist, model, cells, options, histPlotOp
             elseif (options.StorePaths == 2)
                 save(['distTmp_' num2str(l) '_' num2str(k) '.mat'], 'pDist');
                 if (options.Plot > 0)
-                    PlotStateStatistics(pDist, qPlotOptions, cells);
+                    PlotStateStatistics(pDist, qPlotOptions, cells, l);
                 end
             end
 

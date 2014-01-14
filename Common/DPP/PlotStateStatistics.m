@@ -12,7 +12,11 @@ cellIdx = options.cellIdx;
 
 if (nargin == 4)
     if (sum(cellIdx == targetIdx)>0)
-        cellIdx = targetIdx;
+        if pDist.NumCells==1
+           cellIdx = 1; 
+        else
+            cellIdx = targetIdx;
+        end
     else
         return;
     end
